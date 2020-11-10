@@ -12,9 +12,10 @@ Store.create(name: "Whistler", annual_revenue:1900000, mens_apparel:true, womens
 Store.create(name: "Yaletown", annual_revenue:430000, mens_apparel:true, womens_apparel:true)
 
 @mens_stores = Store.where(mens_apparel: true)
+@women_stores = Store.where("womens_apparel=? AND annual_revenue < ?", true, 1000000)
 
-#puts @mens_stores[0].name
+p @women_stores
 
 @mens_stores.each do |element|
-  puts element.name
+  puts "name: #{element.name}, annual revenue: #{element.annual_revenue}"
 end
