@@ -11,3 +11,4 @@ puts "----------"
 
 
 puts "There are #{Store.all.count} store in the table"
+p Store.all

@@ -10,3 +10,5 @@ puts "----------"
 @store2 = Store.find_by(id: 2)
 @store1.update(name: "Vancouver")
 
+
+

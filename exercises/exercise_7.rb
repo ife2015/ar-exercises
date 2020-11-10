@@ -11,7 +11,6 @@ puts "----------"
 
 # Your code goes here ...
 puts "Please Enter a store name"
-#@store_name = $stdin.gets.chomp
-
-create_store = Store.create(name: "Salem")
-create_store.save!
+@store_name = $stdin.gets.chomp
+store_new = Store.create(name: @store_name)
+p store_new.save!
